@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Informatik Merkhilfe" company="InformatikT13600" webLink="https://github.com/InformatikT13600/informatik_merkhilfe" view-date="2021-02-04" view-index="0" gantt-divider-location="518" resource-divider-location="300" version="3.0.3000" locale="de_DE">
+<?xml version="1.0" encoding="UTF-8"?><project name="Informatik Merkhilfe" company="InformatikT13600" webLink="https://github.com/InformatikT13600/informatik_merkhilfe" view-date="2021-01-23" view-index="0" gantt-divider-location="471" resource-divider-location="300" version="3.0.3002" locale="de_DE">
     <description>
         <![CDATA[Eine Merkhilfe für den Informatikunterricht in Form einer Flutter App]]>
     </description>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Vorgang" width="295" order="0"/>
-        <field id="tpd4" name="Anfang" width="83" order="1"/>
-        <field id="tpd5" name="Ende" width="136" order="2"/>
+        <field id="tpd3" name="Vorgang" width="267" order="0"/>
+        <field id="tpd4" name="Anfang" width="76" order="1"/>
+        <field id="tpd5" name="Ende" width="124" order="2"/>
     </view>
     <view id="resource-table">
         <field id="0" name="Ressource" width="210" order="0"/>
@@ -35,28 +35,22 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Projekteinrichtung" color="#8cb6ce" meeting="false" start="2021-02-05" duration="1" complete="0" thirdDate="2021-02-05" thirdDate-constraint="0" expand="true">
-            <depend id="3" type="2" difference="0" hardness="Strong"/>
+        <task id="34" name="Projekteinrichtung" color="#8cb6ce" meeting="false" start="2021-02-05" duration="5" complete="0" thirdDate="2021-02-04" thirdDate-constraint="0" expand="true">
+            <depend id="38" type="2" difference="0" hardness="Strong"/>
+            <depend id="40" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="6" name="Design" color="#8cb6ce" meeting="false" start="2021-02-05" duration="4" complete="0" thirdDate="2021-02-05" thirdDate-constraint="0" expand="true">
-            <depend id="3" type="2" difference="0" hardness="Strong"/>
+        <task id="36" name="Designerstellung" color="#8cb6ce" meeting="false" start="2021-02-05" duration="4" complete="0" thirdDate="2021-02-04" thirdDate-constraint="0" expand="true">
+            <depend id="38" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="3" name="Homescreen" color="#8cb6ce" meeting="false" start="2021-02-11" duration="1" complete="0" thirdDate="2021-02-05" thirdDate-constraint="0" expand="true">
-            <depend id="10" type="2" difference="0" hardness="Strong"/>
+        <task id="38" name="Homescreen" color="#8cb6ce" meeting="false" start="2021-02-18" duration="1" complete="0" thirdDate="2021-02-18" thirdDate-constraint="1" expand="true"/>
+        <task id="40" name="Dateisystem" color="#8cb6ce" meeting="false" start="2021-02-25" duration="15" complete="0" thirdDate="2021-02-25" thirdDate-constraint="1" expand="true">
+            <depend id="46" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="10" name="Dateisystems" color="#8cb6ce" meeting="false" start="2021-02-18" duration="1" complete="0" thirdDate="2021-02-18" thirdDate-constraint="1" expand="true">
-            <depend id="15" type="2" difference="0" hardness="Strong"/>
+        <task id="42" name="Kurzvortrag" color="#8cb6ce" meeting="false" start="2021-03-18" duration="1" complete="0" thirdDate="2021-02-04" thirdDate-constraint="0" expand="true"/>
+        <task id="44" name="Informationen sammeln" color="#8cb6ce" meeting="false" start="2021-02-05" duration="34" complete="0" thirdDate="2021-02-04" thirdDate-constraint="0" expand="true">
+            <depend id="46" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="12" name="Informationen sammeln" color="#8cb6ce" meeting="false" start="2021-02-05" duration="14" complete="0" thirdDate="2021-02-04" thirdDate-constraint="0" expand="true">
-            <depend id="15" type="2" difference="0" hardness="Strong"/>
-        </task>
-        <task id="15" name="Informationen darstellen" color="#8cb6ce" meeting="true" start="2021-02-25" duration="0" complete="0" thirdDate="2021-02-04" thirdDate-constraint="0" expand="true">
-            <depend id="23" type="2" difference="0" hardness="Strong"/>
-        </task>
-        <task id="23" name="Aufbesserung des Designs / UX" color="#8cb6ce" meeting="false" start="2021-03-04" duration="1" complete="0" thirdDate="2021-03-04" thirdDate-constraint="1" expand="true">
-            <depend id="32" type="2" difference="0" hardness="Strong"/>
-        </task>
-        <task id="32" name="Weitere Informationen hinzufügen" color="#8cb6ce" meeting="false" start="2021-03-11" duration="1" complete="0" thirdDate="2021-03-11" thirdDate-constraint="1" expand="true"/>
+        <task id="46" name="Informationen darstellen" color="#8cb6ce" meeting="false" start="2021-03-25" duration="15" complete="0" thirdDate="2021-03-25" thirdDate-constraint="1" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>

@@ -26,6 +26,21 @@ Widget buildRectangularButton() {
 
 Widget buildEllipticalButton() {
 
+  return Container(
+    constraints: BoxConstraints(minHeight: 100, maxHeight: 100, minWidth: 300, maxWidth: 300),
+    decoration: BoxDecoration(
+      border: Border.all(color: colorRed, width: 6),
+      borderRadius: BorderRadius.circular(50),
+    ),
+    child: TextButton(
+      onPressed: () {print('test');},
+      child: Text(
+          'Testtext',
+        style: TextStyle(color: Colors.white, fontSize: 34, fontWeight: FontWeight.normal),
+      ),
+    ),
+  );
+
   return Container();
 
 }

@@ -22,7 +22,10 @@ class _HomeState extends State<Home> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            SizedBox(height: 30),
             buildRectangularButton(),
+            SizedBox(height: 30),
+            buildEllipticalButton(),
           ],
         ),
       ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:informatik_merkhilfe/main.dart';
 import 'package:informatik_merkhilfe/shared/styles.dart';
 
 class Home extends StatefulWidget {
@@ -17,6 +16,15 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         backgroundColor: colorMainAppbar,
         automaticallyImplyLeading: false,
+      ),
+      body: Container(
+        width: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            buildRectangularButton(),
+          ],
+        ),
       ),
     );
   }

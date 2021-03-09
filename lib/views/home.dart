@@ -23,9 +23,9 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: 30),
-            buildRectangularButton(),
+            buildRectangularButton('test'),
             SizedBox(height: 30),
-            buildEllipticalButton(),
+            buildEllipticalButton('test'),
           ],
         ),
       ),

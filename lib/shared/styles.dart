@@ -5,7 +5,7 @@ final Color colorMainAppbar = Color(0xff333399);
 final Color colorRed = Color(0xffD25A5A);
 
 
-Widget buildRectangularButton() {
+Widget buildRectangularButton(String buttonText) {
 
   return Container(
     constraints: BoxConstraints(minHeight: 100, minWidth: 300, maxHeight: 100, maxWidth: 300),
@@ -16,7 +16,7 @@ Widget buildRectangularButton() {
     child: TextButton(
       onPressed: () {print('test');},
       child: Text(
-        'test text',
+        buttonText,
         style: TextStyle(color: Colors.white, fontSize: 34, fontWeight: FontWeight.normal),
       ),
     ),
@@ -24,7 +24,7 @@ Widget buildRectangularButton() {
 
 }
 
-Widget buildEllipticalButton() {
+Widget buildEllipticalButton(String buttonText) {
 
   return Container(
     constraints: BoxConstraints(minHeight: 100, maxHeight: 100, minWidth: 300, maxWidth: 300),
@@ -35,7 +35,7 @@ Widget buildEllipticalButton() {
     child: TextButton(
       onPressed: () {print('test');},
       child: Text(
-          'Testtext',
+          buttonText,
         style: TextStyle(color: Colors.white, fontSize: 34, fontWeight: FontWeight.normal),
       ),
     ),

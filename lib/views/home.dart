@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:informatik_merkhilfe/services/informationService.dart';
+import 'package:informatik_merkhilfe/shared/loading.dart';
 import 'package:informatik_merkhilfe/shared/styles.dart';
 
 class Home extends StatefulWidget {
@@ -7,9 +9,23 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  bool loading = true;
+
+  void initInformationService() async {
+    InformationService.init().then((value) => loading = false);
+  }
+
+  @override
+  void initState() {
+
+    initInformationService();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading? Loading() : Scaffold(
       backgroundColor: colorMainBackground,
       appBar: AppBar(
         title: Text('Informatik Merkhilfe'),
@@ -19,14 +35,13 @@ class _HomeState extends State<Home> {
       ),
       body: Container(
         width: double.infinity,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(height: 30),
-            buildRectangularButton('test'),
-            SizedBox(height: 30),
-            buildEllipticalButton('test'),
-          ],
+        child: ListView.builder(
+          itemCount: InformationService.langs.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+
+            );
+          },
         ),
       ),
     );

@@ -8,8 +8,11 @@ import 'package:informatik_merkhilfe/models/language.dart';
 class InformationService {
 
   static List<Language> langs = [];
-  static Map<String, List<Category>> information = {};
+  static Map<String, List<Category>> informationMap = {};
   static Map<Category, List<Article>> articles = {};
+
+  static Language currentLanguage;
+  static Category currentCategory;
 
 
   /// Initializes service by reading all information from the files
@@ -19,6 +22,11 @@ class InformationService {
     await _readLanguages();
     await _readCategories();
     await _readArticles();
+
+    print('after initializing:');
+    print('languages: ${langs.length}');
+    print('informationMaps: ${informationMap.keys.length}');
+    print('categoriesWithArticles: ${articles.keys.length}');
   }
 
   /// reads all languages from the corresponding json file
@@ -66,7 +74,7 @@ class InformationService {
       cat.buildTree();
 
       // add category to information tree
-      information.update(cat.language, (currentList) {currentList.add(cat); return currentList;}, ifAbsent: () => [cat]);
+      informationMap.update(cat.language, (currentList) {currentList.add(cat); return currentList;}, ifAbsent: () => [cat]);
     }
   }
 
@@ -94,7 +102,7 @@ class InformationService {
       Category category;
 
       // search for the category that is specified in the article exists
-      for(Category cat in information[article.language]) {
+      for(Category cat in informationMap[article.language]) {
         category = _searchForCategory(cat, article.category);
         if(category != null) break;
       }

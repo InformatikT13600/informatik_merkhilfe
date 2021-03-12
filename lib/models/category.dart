@@ -4,6 +4,7 @@ class Category {
   int orderPriority;
   String name;
   List<Map<String, dynamic>> children = [];
+  String parentCategory;
   List<Category> childrenCategories = [];
 
   Category(this.language, this.children, this.name, this.orderPriority);
@@ -25,13 +26,11 @@ class Category {
   }
 
   List<Category> _readChildren() {
-
-    print('reading children of $name:');
     List<Category> retList = [];
 
     for(Map<String, dynamic> childJSON in children) {
       Category childCategory = Category.fromJSON(childJSON);
-      print('          current child: ${childCategory.name}');
+      childCategory.parentCategory = this.name;
       childCategory.buildTree();
       retList.add(childCategory);
     }

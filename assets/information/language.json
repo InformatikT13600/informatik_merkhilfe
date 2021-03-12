@@ -1,0 +1,14 @@
+{
+  "languages": [
+    {
+      "name": "Java",
+      "colorCode": "ffD25A5A",
+      "orderPriority": 100
+    },
+    {
+      "name": "Dart",
+      "colorCode": "ff82C8DC",
+      "orderPriority": 100
+    }
+  ]
+}

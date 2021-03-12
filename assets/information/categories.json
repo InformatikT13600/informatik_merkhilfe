@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "name": "Primitives",
+      "language": "Java",
+      "parentCategory": "",
+      "orderPriority": 100
+    },
+    {
+      "name": "Control",
+      "language": "Java",
+      "parentCategory": "",
+      "orderPriority": 80
+    },
+    {
+      "name": "Operations",
+      "language": "Java",
+      "parentCategory": "",
+      "orderPriority": 90
+    },
+    {
+      "name": "OOP",
+      "language": "Java",
+      "parentCategory": "",
+      "orderPriority": 70
+    },
+    {
+      "name": "Classes",
+      "language": "Java",
+      "parentCategory": "OOP",
+      "orderPriority": 70
+    }
+  ]
+}

@@ -3,32 +3,33 @@
     {
       "name": "Primitives",
       "language": "Java",
-      "parentCategory": "",
-      "orderPriority": 100
+      "orderPriority": 100,
+      "children": []
     },
     {
       "name": "Control",
       "language": "Java",
-      "parentCategory": "",
-      "orderPriority": 80
+      "orderPriority": 80,
+      "children": []
     },
     {
       "name": "Operations",
       "language": "Java",
-      "parentCategory": "",
-      "orderPriority": 90
+      "orderPriority": 90,
+      "children": []
     },
     {
       "name": "OOP",
       "language": "Java",
-      "parentCategory": "",
-      "orderPriority": 70
-    },
-    {
-      "name": "Classes",
-      "language": "Java",
-      "parentCategory": "OOP",
-      "orderPriority": 70
+      "orderPriority": 70,
+      "children": [
+        {
+          "name": "Classes",
+          "language": "Java",
+          "orderPriority": 70,
+          "children": []
+        }
+      ]
     }
   ]
 }

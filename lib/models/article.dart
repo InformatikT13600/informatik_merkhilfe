@@ -4,7 +4,7 @@ class Article {
   String category;
   int orderPriority;
   String name;
-  List<String> content;
+  List<String> content = [];
 
   Article(this.language, this.category, this.name, this.content, this.orderPriority);
 
@@ -12,8 +12,12 @@ class Article {
     name = json['name'];
     orderPriority = json['orderPriority'];
     language = json['language'];
-    category = json['parentCategory'];
-    content = json['content'];
+    category = json['category'];
+
+    List<dynamic> contentList = json['content'];
+    for(String contentLine in contentList) content.add(contentLine);
   }
+
+  bool isValid() => name.isNotEmpty && content.isNotEmpty && category.isNotEmpty && language.isNotEmpty;
 
 }

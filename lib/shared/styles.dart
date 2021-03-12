@@ -26,6 +26,7 @@ Widget _buildButton({String buttonText = "", ButtonShape shape = ButtonShape.REC
       borderRadius: BorderRadius.circular(borderRadius),
     ),
     child: TextButton(
+      style: TextButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius)),),
       onPressed: () => {onPressed()},
       child: Text(
         buttonText,

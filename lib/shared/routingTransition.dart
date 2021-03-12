@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';class RoutingTransition extends PageRouteBuilder {
+import 'package:flutter/material.dart';
+class RoutingTransition extends PageRouteBuilder {
   final Widget page;
   RoutingTransition({this.page})
       : super(

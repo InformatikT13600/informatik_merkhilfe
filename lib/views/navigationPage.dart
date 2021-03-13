@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:informatik_merkhilfe/models/article.dart';
 import 'package:informatik_merkhilfe/models/category.dart';
 import 'package:informatik_merkhilfe/services/informationService.dart';
+import 'package:informatik_merkhilfe/shared/homeButton.dart';
 import 'package:informatik_merkhilfe/shared/navigationPopButton.dart';
 import 'package:informatik_merkhilfe/shared/routingTransition.dart';
 import 'package:informatik_merkhilfe/shared/styles.dart';
+import 'package:informatik_merkhilfe/views/articlePage.dart';
 
 class NavigationPage extends StatelessWidget {
 
@@ -49,54 +51,72 @@ class NavigationPage extends StatelessWidget {
         automaticallyImplyLeading: false,
         leading: NavigationPopButton(),
       ),
-      body: Container(
-        child: children.isNotEmpty ? ListView.builder(
-          scrollDirection: Axis.vertical,
-          clipBehavior: Clip.hardEdge,
-          itemCount: children.length,
-          itemBuilder: (context, index) {
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              child: children.isNotEmpty ? ListView.builder(
+                scrollDirection: Axis.vertical,
+                clipBehavior: Clip.hardEdge,
+                itemCount: children.length,
+                itemBuilder: (context, index) {
 
-            // get current child
-            var child = children[index];
+                  // get current child
+                  var child = children[index];
 
-            // declare button widget;
-            Widget button;
+                  // declare button widget;
+                  Widget button;
 
-            // check if current child is an article
-            if(child is Article) {
-              // build article button
-              button = buildButtonElliptical(buttonText: child.name, color: InformationService.currentLanguage.color, onPressed: () => print('navigate to article page of ${child.name}'));
-            }
+                  // check if current child is an article
+                  if(child is Article) {
+                    // build article button
+                    button = buildButtonElliptical(buttonText: child.name, color: InformationService.currentLanguage.color, onPressed: () {
 
-            // check if current child is a category
-            else if(child is Category) {
+                      // navigate to article page
+                      Navigator.push(context, RoutingTransition(page: ArticlePage(article: child)));
 
-              // return empty container if category has no articles and no children
-              if(child.children.isEmpty && (InformationService.articles[child] == null || InformationService.articles[child].isEmpty)) return Container();
+                    });
+                  }
 
-              button = buildButtonRectangular(buttonText: child.name, color: InformationService.currentLanguage.color, onPressed: () {
+                  // check if current child is a category
+                  else if(child is Category) {
 
-                // store currentCategory
-                Category currentCategoryOld = InformationService.currentCategory;
+                    // return empty container if category has no articles and no children
+                    if(child.children.isEmpty && (InformationService.articles[child] == null || InformationService.articles[child].isEmpty)) return Container();
 
-                // set new current category
-                InformationService.currentCategory = child;
+                    button = buildButtonRectangular(buttonText: child.name, color: InformationService.currentLanguage.color, onPressed: () {
 
-                // navigate to next page
-                Navigator.push(context, RoutingTransition(page: NavigationPage()))
-                // reset category when popping the route
-                    .then((value) => InformationService.currentCategory = currentCategoryOld);
+                      // store currentCategory
+                      Category currentCategoryOld = InformationService.currentCategory;
 
-              });
-            }
+                      // set new current category
+                      InformationService.currentCategory = child;
 
-            // return button with padding
-            return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 15.0),
-              child: Align(alignment: Alignment.center,child: button),
-            );
-          },
-        ) : Text('Pretty empty'),
+                      // navigate to next page
+                      Navigator.push(context, RoutingTransition(page: NavigationPage()))
+                      // reset category when popping the route
+                          .then((value) => InformationService.currentCategory = currentCategoryOld);
+
+                    });
+                  }
+
+                  // return button with padding
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 15.0),
+                    child: Align(alignment: Alignment.center,child: button),
+                  );
+                },
+              ) : Text('Pretty empty'),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: HomeButton(),
+            ),
+          )
+        ],
       ),
     );
   }

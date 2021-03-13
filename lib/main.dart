@@ -18,8 +18,6 @@ class MyApp extends StatelessWidget {
       home: Container(),
       initialRoute: routeHome,
       onGenerateRoute: (settings) {
-        print('settings.name : ${settings.name}');
-
         Widget page;
 
         switch (settings.name) {

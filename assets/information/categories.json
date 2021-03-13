@@ -3,33 +3,28 @@
     {
       "name": "Primitives",
       "language": "Java",
-      "orderPriority": 100,
       "children": []
     },
     {
       "name": "Control",
       "language": "Java",
-      "orderPriority": 80,
-      "children": []
-    },
-    {
-      "name": "Operations",
-      "language": "Java",
-      "orderPriority": 90,
       "children": []
     },
     {
       "name": "OOP",
       "language": "Java",
-      "orderPriority": 70,
       "children": [
         {
           "name": "Classes",
           "language": "Java",
-          "orderPriority": 70,
           "children": []
         }
       ]
+    },
+    {
+      "name": "Operations",
+      "language": "Java",
+      "children": []
     }
   ]
 }

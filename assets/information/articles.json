@@ -4,28 +4,24 @@
       "name": "boolean",
       "language": "Java",
       "category": "Primitives",
-      "orderPriority": 100,
       "content": ["Test 123", "zweite Zeile", "WWIII ??!?"]
     },
     {
       "name": "byte",
       "language": "Java",
       "category": "Primitives",
-      "orderPriority": 90,
       "content": ["do you know da wae?", "Wariluirio", "f", "1 in den Chat, wenn ihr das kennt, 1 in den chat wenn ihr das nicht kennt"]
     },
     {
       "name": "long",
       "language": "Java",
       "category": "Primitives",
-      "orderPriority": 70,
       "content": ["ein long ist lang", "nicht zu verwechseln mit lang, das ist language", "oh"]
     },
     {
       "name": "int",
       "language": "Java",
       "category": "Primitives",
-      "orderPriority": 80,
       "content": ["Y?", "Yes?", "or", "Why?", "Das ist die Frage"]
     }
   ]

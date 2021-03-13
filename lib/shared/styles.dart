@@ -9,7 +9,7 @@ enum ButtonShape {
   ELLIPTICAL,
 }
 
-Widget _buildButton({String buttonText = "", ButtonShape shape = ButtonShape.RECTANGULAR, Color color = Colors.white, @required Function onPressed}) {
+Widget _buildButton({String buttonText = "", ButtonShape shape = ButtonShape.RECTANGULAR, Color color = Colors.white, bool filled = false, @required Function onPressed}) {
 
   double borderRadius = 0;
 
@@ -24,6 +24,7 @@ Widget _buildButton({String buttonText = "", ButtonShape shape = ButtonShape.REC
     decoration: BoxDecoration(
       border: Border.all(color: color, width: 6),
       borderRadius: BorderRadius.circular(borderRadius),
+      color: filled ? color : Colors.transparent,
     ),
     child: TextButton(
       style: TextButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius)),),
@@ -36,10 +37,10 @@ Widget _buildButton({String buttonText = "", ButtonShape shape = ButtonShape.REC
   );
 }
 
-Widget buildButtonRectangular({String buttonText = "", Color color = Colors.white, @required Function onPressed}) {
-  return _buildButton(buttonText: buttonText, color: color, onPressed: onPressed, shape: ButtonShape.RECTANGULAR);
+Widget buildButtonRectangular({String buttonText = "", Color color = Colors.white, bool filled = false, @required Function onPressed}) {
+  return _buildButton(buttonText: buttonText, color: color, filled: filled, onPressed: onPressed, shape: ButtonShape.RECTANGULAR);
 }
 
-Widget buildButtonElliptical({String buttonText = "", Color color = Colors.white, @required Function onPressed}) {
-  return _buildButton(buttonText: buttonText, color: color, onPressed: onPressed, shape: ButtonShape.ELLIPTICAL);
+Widget buildButtonElliptical({String buttonText = "", Color color = Colors.white, bool filled = false, @required Function onPressed}) {
+  return _buildButton(buttonText: buttonText, color: color, filled: filled, onPressed: onPressed, shape: ButtonShape.ELLIPTICAL);
 }

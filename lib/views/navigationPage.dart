@@ -5,6 +5,7 @@ import 'package:informatik_merkhilfe/services/informationService.dart';
 import 'package:informatik_merkhilfe/shared/navigationPopButton.dart';
 import 'package:informatik_merkhilfe/shared/routingTransition.dart';
 import 'package:informatik_merkhilfe/shared/styles.dart';
+import 'package:informatik_merkhilfe/views/articlePage.dart';
 
 class NavigationPage extends StatelessWidget {
 
@@ -65,7 +66,12 @@ class NavigationPage extends StatelessWidget {
             // check if current child is an article
             if(child is Article) {
               // build article button
-              button = buildButtonElliptical(buttonText: child.name, color: InformationService.currentLanguage.color, onPressed: () => print('navigate to article page of ${child.name}'));
+              button = buildButtonElliptical(buttonText: child.name, color: InformationService.currentLanguage.color, onPressed: () {
+
+                // navigate to article page
+                Navigator.push(context, RoutingTransition(page: ArticlePage(article: child)));
+
+              });
             }
 
             // check if current child is a category

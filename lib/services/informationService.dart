@@ -119,7 +119,6 @@ class InformationService {
   static Category _searchForCategory(Category category, String searchedCategory) {
     if(category.name == searchedCategory) return category;
     for(Category childCategory in category.childrenCategories) {
-      if(childCategory.name == searchedCategory) return childCategory;
       Category possiblyExistingCategory = _searchForCategory(childCategory, searchedCategory);
       if(possiblyExistingCategory != null) return possiblyExistingCategory;
     }

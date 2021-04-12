@@ -3,26 +3,50 @@
     {
       "name": "boolean",
       "language": "Java",
-      "category": "Primitives",
-      "content": ["Test 123", "zweite Zeile", "WWIII ??!?"]
+      "category": "Primitive Datentypen",
+      "content": ["Speichert einen Wahrheitswert: true/false", "Deklaration: \nboolean bool = false; // /true"]
     },
     {
       "name": "byte",
       "language": "Java",
-      "category": "Primitives",
-      "content": ["do you know da wae?", "Wariluirio", "f", "1 in den Chat, wenn ihr das kennt, 1 in den chat wenn ihr das nicht kennt"]
+      "category": "Primitive Datentypen",
+      "content": ["Speichert eine Ganzzahl im Bereich -128 ... 127", "Die Speichergröße beträgt also, wie der Name vermuten lässt: 8-bit", "Deklaration: \nbyte b = 42;"]
     },
     {
-      "name": "long",
+      "name": "short",
       "language": "Java",
-      "category": "Primitives",
-      "content": ["ein long ist lang", "nicht zu verwechseln mit lang, das ist language", "oh"]
+      "category": "Primitive Datentypen",
+      "content": ["Speichert eine Ganzzahl im Bereich -32.768 ... 32.767 (Speichergröße 16-bit)", "Deklaration: \nshort s = 3003;"]
+    },
+    {
+      "name": "char",
+      "language": "Java",
+      "category": "Primitive Datentypen",
+      "content": ["Speichert ein UTF-16 Symbol (Speichergröße 16-bit)", "Deklaration: \nchar c = 'c';\nZu beachten gilt, dass einfache Anführungszeichen zu verwenden sind. Doppelte Anführungszeichen werden für Strings verwendet. Siehe dazu den Artikel \"Strings\""]
     },
     {
       "name": "int",
       "language": "Java",
-      "category": "Primitives",
-      "content": ["Y?", "Yes?", "or", "Why?", "Das ist die Frage"]
+      "category": "Primitive Datentypen",
+      "content": ["Speichert eine Ganzzahl im Bereich -2.147.483.648 ... 2.147.483.647 (32-bit)", "Deklaration: \nint i = 701;", "Integer haben zwar nicht den größten Wertebereich, reichen allerdings für die meisten Anwendungen vollkommen aus. Daher solltest du vorzugsweise immer einen int anstelle eines longs verwenden", "Der int ist außerdem der Standard für Ganzzahlen im Compiler"]
+    },
+    {
+      "name": "long",
+      "language": "Java",
+      "category": "Primitive Datentypen",
+      "content": ["Speichert eine Ganzzahl im Bereich -2^63 ... 2^63-1 (64-bit)", "Deklaration: \nlong l = 70142069;", "Long haben einen wesentlich größeren Wertebereich als Integer, verbrauchen allerdings auch doppelt so viel Speicher. In den meisten Fällen reicht ein int vollkommen aus", "Hängt man einem Zahlenwert den Buchstaben L an, kann man dem Compiler mitteilen, dass es sich um einen long Wert handelt. Per Standard nimmt der Compiler nämlich einen int an"]
+    },
+    {
+      "name": "float",
+      "language": "Java",
+      "category": "Primitive Datentypen",
+      "content": ["Speichert eine Gleitkommazahl im Bereich +/-1,4E-45 ... +/-3,4E+38 (32-bit)", "Deklaration: \nfloat f = 3.14F;", "Üblicherweise werden float-Werte mit einem F am Ende der Zahl beschmückt. Damit teilt man dem Compiler mit, dass es sich bei der Zahl um einen float handelt. Als Standard nimmt der Compiler nämlich den präziseren double an"]
+    },
+    {
+      "name": "double",
+      "language": "Java",
+      "category": "Primitive Datentypen",
+      "content": ["Speichert eine Gleitkommazahl im Bereich +/-4,9E-324 ... +/-1,7E+308 (64-bit)", "Deklaration: \ndouble d = 3.14D;", "Hängt man einem Zahlenwert den Buchstaben D an, kann man dem Compiler mitteilen, dass es sich um einen double Wert handelt"]
     }
   ]
 }

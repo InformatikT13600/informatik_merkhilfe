@@ -29,9 +29,13 @@ Widget _buildButton({String buttonText = "", ButtonShape shape = ButtonShape.REC
     child: TextButton(
       style: TextButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius)),),
       onPressed: () => {onPressed()},
-      child: Text(
-        buttonText,
-        style: TextStyle(color: Colors.white, fontSize: 34, fontWeight: FontWeight.normal),
+      child: FittedBox(
+        fit: BoxFit.contain,
+        child: Text(
+          buttonText,
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white, fontSize: 34, fontWeight: FontWeight.normal),
+        ),
       ),
     ),
   );

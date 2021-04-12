@@ -45,7 +45,7 @@ class NavigationPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: colorMainBackground,
       appBar: AppBar(
-        title: Text(title, style: TextStyle(fontSize: 34),),
+        title: FittedBox(fit: BoxFit.contain,child: Text(title, style: TextStyle(fontSize: 34),)),
         centerTitle: true,
         backgroundColor: colorMainAppbar,
         automaticallyImplyLeading: false,

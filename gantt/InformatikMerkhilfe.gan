@@ -52,13 +52,14 @@
             <depend id="55" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="42" name="Kurzvortrag" color="#8cb6ce" meeting="false" start="2021-03-25" duration="1" complete="0" thirdDate="2021-02-04" thirdDate-constraint="0" expand="true"/>
-        <task id="44" name="Informationen sammeln" color="#8cb6ce" meeting="false" start="2021-02-05" duration="46" complete="0" thirdDate="2021-02-04" thirdDate-constraint="0" expand="true">
+        <task id="44" name="Informationen sammeln" color="#8cb6ce" meeting="false" start="2021-02-05" duration="64" complete="0" thirdDate="2021-02-04" thirdDate-constraint="0" expand="true">
             <depend id="55" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="56" name="Implementierung einer Suchfunktion" color="#8cb6ce" meeting="false" start="2021-04-26" duration="3" complete="0" thirdDate="2021-04-26" thirdDate-constraint="1" expand="true">
+        <task id="56" name="Implementierung einer Suchfunktion" color="#8cb6ce" meeting="false" start="2021-04-26" duration="8" complete="0" thirdDate="2021-04-26" thirdDate-constraint="1" expand="true">
             <depend id="55" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="55" name="Fertigstellung V1" color="#8cb6ce" meeting="true" start="2021-05-06" duration="0" complete="0" thirdDate="2021-05-06" thirdDate-constraint="1" expand="true"/>
+        <task id="57" name="Erstellung einer Administrationsoberfläche" color="#8cb6ce" meeting="false" start="2021-04-19" duration="19" complete="0" thirdDate="2021-04-19" thirdDate-constraint="1" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>

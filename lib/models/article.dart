@@ -19,7 +19,7 @@ class Article {
     contentList.forEach((contentLine) => content.add(contentLine));
 
     List<dynamic> tagList = json['tags'];
-    tagList.forEach((tag) => content.add(tag));
+    tagList.forEach((tag) => tags.add(tag));
   }
 
   bool isValid() => name.isNotEmpty && content.isNotEmpty && category.isNotEmpty && language.isNotEmpty;

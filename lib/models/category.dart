@@ -9,6 +9,7 @@ class Category {
 
   Category(this.language, this.children, this.name, this.orderPriority);
 
+  /// deserializes a [json] and creates a [Category]
   Category.fromJSON(Map<String, dynamic> json) {
     name = json['name'];
     orderPriority = json['orderPriority'];
@@ -19,8 +20,10 @@ class Category {
     for(Map<String, dynamic> child in childrenList) children.add(child);
   }
 
+  /// tells whether or not the [Category] is valid
   bool isValid() => name.isNotEmpty && language.isNotEmpty;
 
+  /// builds the tree of subcategories and articles by reading through all the json objects
   void buildTree() {
     childrenCategories = _readChildren();
   }

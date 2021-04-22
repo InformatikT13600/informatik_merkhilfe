@@ -9,7 +9,13 @@ class InformationService {
 
   static List<Language> langs = [];
   static Map<String, List<Category>> informationMap = {};
-  static Map<Category, List<Article>> articles = {};
+
+  /// a map that contains all [Article]s a given [Category] has
+  static Map<Category, List<Article>> articleLists = {};
+
+  /// a list that contains all existing and valid [Article]s
+  /// disregarding whether or not the parent [Category] exists
+  static List<Article> articles = [];
 
   static Language currentLanguage;
   static Category currentCategory;
@@ -26,7 +32,7 @@ class InformationService {
     print('after initializing:');
     print('languages: ${langs.length}');
     print('informationMaps: ${informationMap.keys.length}');
-    print('categoriesWithArticles: ${articles.keys.length}');
+    print('categoriesWithArticles: ${articleLists.keys.length}');
   }
 
   /// reads all languages from the corresponding json file
@@ -99,6 +105,9 @@ class InformationService {
       // check if the language that is specified in the article exists
       if(!langs.any((element) => element.name == article.language)) continue;
 
+      // article is valid => add it to the articles list
+      InformationService.articles.add(article);
+
       Category category;
 
       // search for the category that is specified in the article exists
@@ -111,7 +120,7 @@ class InformationService {
       if(category == null) return;
 
       // add article to articles map
-      InformationService.articles.update(category, (currentList) {currentList.add(article); return currentList;}, ifAbsent: () => [article]);
+      InformationService.articleLists.update(category, (currentList) {currentList.add(article); return currentList;}, ifAbsent: () => [article]);
     }
   }
 

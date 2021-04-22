@@ -103,47 +103,49 @@ class _NavigationPageState extends State<NavigationPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  height: 45,
-                  width: 200,
-                  padding: EdgeInsets.only(top: 5),
-                  child: TextField(
-                    key: Key('search'),
-                    controller: _controller,
-                    decoration: NavigationPage.searchInputDecoration,
-                    textAlign: TextAlign.left,
-                    textAlignVertical: TextAlignVertical.top,
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                    onSubmitted: ((input) {
+                Expanded(
+                  child: Container(
+                    height: 45,
+                    width: 200,
+                    padding: EdgeInsets.only(top: 5),
+                    child: TextField(
+                      key: Key('search'),
+                      controller: _controller,
+                      decoration: NavigationPage.searchInputDecoration,
+                      textAlign: TextAlign.left,
+                      textAlignVertical: TextAlignVertical.top,
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                      onSubmitted: ((input) {
 
-                      // if input is empty => display like normal
-                      if(input.isEmpty) {
-                        setState(() =>  displayedChildren = children);
-                        return;
-                      }
-
-                      // check all articles for any match
-
-                      List<Article> matches = [];
-
-                      // iterate through all articles
-                      InformationService.articles.forEach((article) {
-                        // check if article is part of the current language
-                        if(article.language == InformationService.currentLanguage.name) {
-
-                          // check if the article has a match with the input
-                          if(article.hasMatch(input))
-                            // add it to the list of displayed articles
-                            matches.add(article);
-
+                        // if input is empty => display like normal
+                        if(input.isEmpty) {
+                          setState(() =>  displayedChildren = children);
+                          return;
                         }
-                      });
 
-                      // set new displayed list
-                      setState(() => displayedChildren = matches);
+                        // check all articles for any match
+
+                        List<Article> matches = [];
+
+                        // iterate through all articles
+                        InformationService.articles.forEach((article) {
+                          // check if article is part of the current language
+                          if(article.language == InformationService.currentLanguage.name) {
+
+                            // check if the article has a match with the input
+                            if(article.hasMatch(input))
+                              // add it to the list of displayed articles
+                              matches.add(article);
+
+                          }
+                        });
+
+                        // set new displayed list
+                        setState(() => displayedChildren = matches);
 
 
-                    }),
+                      }),
+                    ),
                   ),
                 ),
                 FittedBox(

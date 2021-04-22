@@ -6,7 +6,12 @@
       "children": []
     },
     {
-      "name": "Control",
+      "name": "Kontrollstrukturen",
+      "language": "Java",
+      "children": []
+    },
+    {
+      "name": "Datenstrukturen",
       "language": "Java",
       "children": []
     },

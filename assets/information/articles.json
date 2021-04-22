@@ -22,7 +22,7 @@
       "name": "char",
       "language": "Java",
       "category": "Primitive Datentypen",
-      "content": ["Speichert ein UTF-16 Symbol (Speichergröße 16-bit)", "Deklaration: \nchar c = 'c';\nZu beachten gilt, dass einfache Anführungszeichen zu verwenden sind. Doppelte Anführungszeichen werden für Strings verwendet. Siehe dazu den Artikel \"Strings\""]
+      "content": ["Speichert ein UTF-16 Symbol (Speichergröße 16-bit)", "Deklaration: \nchar c = 'c';\nZu beachten gilt, dass einfache Anführungszeichen zu verwenden sind. Doppelte Anführungszeichen werden für Strings verwendet. Siehe dazu den Artikel \"Java/Datenstrukturen/Strings\""]
     },
     {
       "name": "int",
@@ -47,6 +47,96 @@
       "language": "Java",
       "category": "Primitive Datentypen",
       "content": ["Speichert eine Gleitkommazahl im Bereich +/-4,9E-324 ... +/-1,7E+308 (64-bit)", "Deklaration: \ndouble d = 3.14D;", "Hängt man einem Zahlenwert den Buchstaben D an, kann man dem Compiler mitteilen, dass es sich um einen double Wert handelt"]
+    },
+    {
+      "name": "Einleitung",
+      "language": "Java",
+      "category": "Kontrollstrukturen",
+      "content": ["Kontrollstrukturen dienen dazu, innerhalb eines Programmes Entscheidungen zu treffen und basierend auf diesen den Verauf des Programmes anzupassen", "Beispiele sind Wenn-Dann-Ausdrücke oder Schleifen, die einen Teil des Codes basierend auf einer Bedingung wiederholen"]
+    },
+    {
+      "name": "Anweisungsblöcke",
+      "language": "Java",
+      "category": "Kontrollstrukturen",
+      "content":  ["Anweisungsblöcke sind Blöcke innerhalb eines Programms, die zusammengehörige Anweisungen zusammenfassen", "So besteht jede Kontrollstruktur zunächst aus einem Kopf und einem Körper. Letzterer ist ein Anweisungsblock", "Anweisungsblöcke können in Form verschiedener Kontrollstrukturen beliebig eineinander Verschachtelt werden", "Für Variablen die innerhalb eines Anweisungsblockes deklariert werden, gelten besondere Bedingungen. Man kann auf diese nur nach der Deklaration und innerhalb des gleichen oder in einem untergeordeten Anweisungsblock zugreifen"]
+    },
+    {
+      "name": "If-Anweisung",
+      "language": "Java",
+      "category": "Kontrollstrukturen",
+      "content":  ["Die If-Anweisung wird wie folgt deklariert:\n\nif(BEDINGUNG) {\n  // ausführen, wenn BEDINGUNG true\n}", "Ist die Bedingung erfüllt, so wird die Anweisung innerhalb des Körpers (Anweisungsblock) ausgeführt und anschließend das Programm nach der If-Anweisung weitergeführt", "Innerhalb des Anweisungskörpers können auch mehrere Anweisungen stehen", "Tritt die Bedingung nicht ein, wird das Programm nach Ende des Anweisungsblockes weitergeführt und der Teil innerhalb dessen übersprungen","An Stelle von BEDINGUNG muss dabei ein boolean-Wert stehen. Das kann entweder true, false, eine boolean-Variable oder ein logischer Ausdruck sein"]
+    },
+    {
+      "name": "If-Else-Anweisung",
+      "language": "Java",
+      "category": "Kontrollstrukturen",
+      "content":  ["Die If-Else-Anweisung wird wie folgt deklariert:\n\nif(BEDINGUNG) {\n  // ausführen, wenn BEDINGUNG true\n} else {\n  // ausführen, wenn BEDINGUNG false\n}", "Die If-Else-Anweisung funktioniert analog zur If-Anweisung, mit dem Unterschied, dass im Fall, dass die Bedingung false ist, der Code im else-Block ausgeführt wird"]
+    },
+    {
+      "name": "If-Else-If-Anweisung",
+      "language": "Java",
+      "category": "Kontrollstrukturen",
+      "content":  ["Die If-ElseIf-Anweisung wird wie folgt deklariert:\n\nif(BEDINGUNG1) {\n  // ausführen, wenn BEDINGUNG1 true\n} else if (BEDINGUNG2) {\n  // ausführen, wenn BEDINGUNG2 true\n}", "Die If-ElseIf-Anweisung unterscheidet mehrere Fälle, funkioniert ansonsten aber analog zur If-Anweisung. Es lassen sich auch mit weiteren \"else if\"s beliebig viele weitere Fälle überprüfen. In der Regel benutzt man dies aber ab 4 oder mehr Fällen aus Gründen der Übersichtlichkeit nicht mehr", "Optional lässt sich auch hier ein else-Block ans Ende anhängen, um sonstige Fälle abzudecken"]
+    },
+    {
+      "name": "While-Schleife",
+      "language": "Java",
+      "category": "Kontrollstrukturen",
+      "content":  ["Die While-Schleife wird wie folgt deklariert:\n\nwhile(BEDINGUNG) {\n  // Code ausführen\n}", "Die While-Schleife funkioniert erst einmal genauso wie eine If-Anweisung - mit einem entscheidenen Unterschied:\n Wurde der Schleifenkörper (Anweisungsblock nach der Bedingung) ausgeführt, springt das Programm wieder zum Schleifenkopf und prüft erneut, ob die Bedingung erfüllt ist. Ist dies der Fall, wird der Schleifenkörper erneut ausgeführt. Das wiederholt sich so lange, wie die Bedingung erfüllt ist", "Wichtig bei einer Schleife ist, dass sich innerhalb des Schleifenkörpers eine sogenannte \"Abbruchbedingung\" befindet. Diese bricht die Schleife ab, sobald eine bestimmte Bedingung erfüllt ist. Gibt es eine solche Abbruchbedingung nicht, oder wird diese nie erreicht, wird die Schleife endlos lange ausgeführt, was in der Regel zu einem Programmabsturz führt", "Es gibt im wesentlichen zwei Wege eine Schleife zu beenden:\n 1. Eine Variable im Schleifenkopf wird so verändert, dass die Bedingung nicht mehr erfüllt ist, oder\n 2. Innerhalb des Schleifenkörpers wird die Anweisung \"break\" ausgeführt.\n break bricht die Schleife an der Stelle, an der es ausgeführt wird ab. Für mehr Informationen, siehe den Artikel \"break und continue\""]
+    },
+    {
+      "name": "Do-While-Schleife",
+      "language": "Java",
+      "category": "Kontrollstrukturen",
+      "content":  ["Die Do-While-Schleife wird wie folgt deklariert:\n\ndo {\n // Code ausführen\n} while (BEDINGUNG);", "Die Do-While-Schleife funkioniert analog zur While-Schleife - mit dem Unterschied, dass eine Do-While-Schleife erst den Anweisungsblock ausführt, und dann die Bedingung prüft. Damit wird sichergestellt, dass der Anweisungsblock unabhängig von der Bedingung immer zumindest einmal ausgeführt wird"]
+    },
+    {
+      "name": "For-Schleife",
+      "language": "Java",
+      "category": "Kontrollstrukturen",
+      "content":  ["Die For-Schleife wird auch als Zählerschleife bezeichnet und in folgender Form deklariert:\n\nfor(int i = 0; i < n; i++) {\n  // Wiederhole n-mal\n}", "Im Schleifenkopf wird \n1. eine Zählervariable (hier i) initialisiert,\n2. eine Bedingung aufgestellt und\n3. die Zählervariable hochgezählt", "Wird eine For-Schleife ausgeführt, so wird zunächst die Zählervariable initialisiert und anschließend die Schleifenbedingung überprüft. Ist die Bedingung erfüllt, wird der Schleifenkörper ausgeführt und danach die Zählerschleife erhöht, bzw. verringert", "Die Zählervariable muss dabei nicht mit 0 initialisiert werden und sie muss auch nicht zwangsläufig um den Wert 1 erhöht werden, jedoch ist das die übliche Form"]
+    },
+    {
+      "name": "For-Each-Schleife",
+      "language": "Java",
+      "category": "Kontrollstrukturen",
+      "content":  ["Die For-Each-Schleife iteriert durch Iterables, wie Listen oder Arrays.\n\nSie wird wie folgt initialisiert:\n// list ist vom Typ List<Object>\nfor(Object element : list) {\n  // Code ausführen\n}", "Die For-Each-Schleife wiederholt den im Schleifenkörper definierten Ausführungsblock so oft, wie das Iterable lang ist, wobei element bei jedem Schleifendurchlauf das jeweilige Element des Iterables ist", "Wichtig: Das Iterable kann innerhalb der Schleife nicht bearbeitet werden"]
+    },
+    {
+      "name": "Switch-Anweisung",
+      "language": "Java",
+      "category": "Kontrollstrukturen",
+      "content":  ["Eine Switch-Anweisung dient dazu, verschiedene Fälle zu unterscheiden. Im Folgenden das Beispiel einer Überprüfung von einer String-Variable:\n\nswitch(wochentag) {\n  case(\"Samstag\"): System.out.println(\"Es ist Samstag!\"); break;\n  case(\"Sonntag\"): System.out.println(\"Es ist Sonntag!\"); break;\n  default: System.out.println(\"Es ist kein Wochenende );\");\n}", "\"default: \" ist dabei der Default-Case, also das, was ausgeführt wird, wenn keiner der anderen Fälle eintritt", "Wichtig: Am Ende jedes Ausführungsblockes in einem case, muss ein break sein, da sonst der Code aus dem nächsten Case ebenfalls ausgeführt wird. Bei dem default-case braucht es das nicht"]
+    },
+    {
+      "name": "break und continue",
+      "language": "Java",
+      "category": "Kontrollstrukturen",
+      "content":  ["Bei Schleifen gibt es zwei wichtige Keywords: break und continue", "break bricht die Schleife an der Stelle, an der es ausgeführt wird ab. Das Programm wird dann nach der Schleife weitergeführt", "continue springt zum nächsten Schleifendurchlauf, wodurch nachfolgender Code übersprungen wird"]
+    },
+    {
+      "name": "Arrays",
+      "language": "Java",
+      "category": "Datenstrukturen",
+      "content":  [""]
+    },
+    {
+      "name": "String",
+      "language": "Java",
+      "category": "Datenstrukturen",
+      "content":  [""]
+    },
+    {
+      "name": "List",
+      "language": "Java",
+      "category": "Datenstrukturen",
+      "content":  [""]
+    },
+    {
+      "name": "Map",
+      "language": "Java",
+      "category": "Datenstrukturen",
+      "content":  [""]
     }
   ]
 }

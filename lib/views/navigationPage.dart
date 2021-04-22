@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:informatik_merkhilfe/models/article.dart';
 import 'package:informatik_merkhilfe/models/category.dart';
 import 'package:informatik_merkhilfe/services/informationService.dart';
@@ -50,7 +51,7 @@ class _NavigationPageState extends State<NavigationPage> {
   List<dynamic> children = [];
 
   List<dynamic> displayedChildren = [];
-  String searchTerm = '';
+  TextEditingController _controller = new TextEditingController();
 
   @override
   void initState() {
@@ -99,48 +100,67 @@ class _NavigationPageState extends State<NavigationPage> {
             FittedBox(fit: BoxFit.contain,child: Text(title, style: TextStyle(fontSize: 34),)),
 
             /* searchbar */
-            Container(
-              height: 45,
-              width: double.maxFinite,
-              padding: EdgeInsets.only(top: 5),
-              child: TextField(
-                key: Key('search'),
-                decoration: NavigationPage.searchInputDecoration,
-                textAlign: TextAlign.left,
-                textAlignVertical: TextAlignVertical.top,
-                style: TextStyle(fontSize: 20, color: Colors.white),
-                onChanged: (input) => searchTerm = input,
-                onSubmitted: ((input) {
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 45,
+                  width: 200,
+                  padding: EdgeInsets.only(top: 5),
+                  child: TextField(
+                    key: Key('search'),
+                    controller: _controller,
+                    decoration: NavigationPage.searchInputDecoration,
+                    textAlign: TextAlign.left,
+                    textAlignVertical: TextAlignVertical.top,
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    onSubmitted: ((input) {
 
-                  // if input is empty => display like normal
-                  if(input.isEmpty) {
-                    setState(() =>  displayedChildren = children);
-                    return;
-                  }
+                      // if input is empty => display like normal
+                      if(input.isEmpty) {
+                        setState(() =>  displayedChildren = children);
+                        return;
+                      }
 
-                  // check all articles for any match
+                      // check all articles for any match
 
-                  List<Article> matches = [];
+                      List<Article> matches = [];
 
-                  // iterate through all articles
-                  InformationService.articles.forEach((article) {
-                    // check if article is part of the current language
-                    if(article.language == InformationService.currentLanguage.name) {
+                      // iterate through all articles
+                      InformationService.articles.forEach((article) {
+                        // check if article is part of the current language
+                        if(article.language == InformationService.currentLanguage.name) {
 
-                      // check if the article has a match with the search term
-                      if(article.hasMatch(input))
-                        // add it to the list of displayed articles
-                        matches.add(article);
+                          // check if the article has a match with the input
+                          if(article.hasMatch(input))
+                            // add it to the list of displayed articles
+                            matches.add(article);
 
-                    }
-                  });
+                        }
+                      });
 
-                  // set new displayed list
-                  setState(() => displayedChildren = matches);
+                      // set new displayed list
+                      setState(() => displayedChildren = matches);
 
 
-                }),
-              ),
+                    }),
+                  ),
+                ),
+                FittedBox(
+                  fit: BoxFit.fill,
+                  child: IconButton(
+                    onPressed: () {
+                      // delete input and reset displayed children
+                      setState(() {
+                        displayedChildren = children;
+                        _controller.value = TextEditingValue.empty;
+                      });
+                    },
+                    // does not actually affect the button itself but only it's optical appearance (color)
+                    icon: _controller.value.text.isEmpty ? SvgPicture.asset('assets/icons/delete_disabled.svg') : SvgPicture.asset('assets/icons/delete_enabled.svg'),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

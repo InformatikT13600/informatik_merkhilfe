@@ -1,35 +1,34 @@
-{
-  "categories": [
-    {
-      "name": "Primitive Datentypen",
-      "language": "Java",
-      "children": []
-    },
-    {
-      "name": "Kontrollstrukturen",
-      "language": "Java",
-      "children": []
-    },
-    {
-      "name": "Datenstrukturen",
-      "language": "Java",
-      "children": []
-    },
-    {
-      "name": "OOP",
-      "language": "Java",
-      "children": [
-        {
-          "name": "Classes",
-          "language": "Java",
-          "children": []
-        }
-      ]
-    },
-    {
-      "name": "Operations",
-      "language": "Java",
-      "children": []
-    }
-  ]
-}
+[
+  {
+    "name": "Primitive Datentypen",
+    "language": "Java",
+    "children": []
+  },
+  {
+    "name": "Kontrollstrukturen",
+    "language": "Java",
+    "children": []
+  },
+  {
+    "name": "Datenstrukturen",
+    "language": "Java",
+    "children": []
+  },
+  {
+    "name": "OOP",
+    "language": "Java",
+    "children": [
+      {
+        "name": "Classes",
+        "language": "Java",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "Operations",
+    "language": "Java",
+    "children": []
+  }
+]
+

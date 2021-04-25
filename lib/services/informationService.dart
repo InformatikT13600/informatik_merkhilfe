@@ -38,11 +38,8 @@ class InformationService {
   /// reads all languages from the corresponding json file
   static Future<void> _readLanguages() async {
 
-    // read json object from json file
-    Map<String, dynamic> langJSON = jsonDecode(await rootBundle.loadString('assets/information/language.json'));
-
-    // get list of language json objects
-    List<dynamic> languages = langJSON['languages'];
+    // read json array from json file
+    List<dynamic> languages = jsonDecode(await rootBundle.loadString('assets/information/language.json'));
 
     // iterate through all language json objects
     for(Map<String, dynamic> map in languages) {
@@ -58,11 +55,8 @@ class InformationService {
   /// reads all categories from the corresponding json file
   static Future<void> _readCategories() async {
 
-    // read json object from json file
-    Map<String, dynamic> langJSON = jsonDecode(await rootBundle.loadString('assets/information/categories.json'));
-
-    // get list of category json objects
-    List<dynamic> categories = langJSON['categories'];
+    // read json array from json file
+    List<dynamic> categories = jsonDecode(await rootBundle.loadString('assets/information/categories.json'));
 
     // iterate through all category json objects
     for(Map<String, dynamic> map in categories) {

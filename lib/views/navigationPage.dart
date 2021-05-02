@@ -172,63 +172,61 @@ class _NavigationPageState extends State<NavigationPage> {
         automaticallyImplyLeading: false,
         leading: NavigationPopButton(),
       ),
-      body: Column(
+      body: Stack(
         children: [
-          Expanded(
-            child: Container(
-              child: displayedChildren.isNotEmpty ? ListView.builder(
-                scrollDirection: Axis.vertical,
-                clipBehavior: Clip.hardEdge,
-                itemCount: displayedChildren.length,
-                itemBuilder: (context, index) {
+          Container(
+            child: displayedChildren.isNotEmpty ? ListView.builder(
+              scrollDirection: Axis.vertical,
+              clipBehavior: Clip.hardEdge,
+              itemCount: displayedChildren.length,
+              itemBuilder: (context, index) {
 
-                  // get current child
-                  var child = displayedChildren[index];
+                // get current child
+                var child = displayedChildren[index];
 
-                  // declare button widget;
-                  Widget button;
+                // declare button widget;
+                Widget button;
 
-                  // check if current child is an article
-                  if(child is Article) {
-                    // build article button
-                    button = buildButtonElliptical(buttonText: child.name, color: InformationService.currentLanguage.color, onPressed: () {
+                // check if current child is an article
+                if(child is Article) {
+                  // build article button
+                  button = buildButtonElliptical(buttonText: child.name, color: InformationService.currentLanguage.color, onPressed: () {
 
-                      // navigate to article page
-                      Navigator.push(context, RoutingTransition(page: ArticlePage(article: child)));
+                    // navigate to article page
+                    Navigator.push(context, RoutingTransition(page: ArticlePage(article: child)));
 
-                    });
-                  }
+                  });
+                }
 
-                  // check if current child is a category
-                  else if(child is Category) {
+                // check if current child is a category
+                else if(child is Category) {
 
-                    // return empty container if category has no articles and no children
-                    if(child.children.isEmpty && (InformationService.articleLists[child] == null || InformationService.articleLists[child].isEmpty)) return Container();
+                  // return empty container if category has no articles and no children
+                  if(child.children.isEmpty && (InformationService.articleLists[child] == null || InformationService.articleLists[child].isEmpty)) return Container();
 
-                    button = buildButtonRectangular(buttonText: child.name, color: InformationService.currentLanguage.color, onPressed: () {
+                  button = buildButtonRectangular(buttonText: child.name, color: InformationService.currentLanguage.color, onPressed: () {
 
-                      // store currentCategory
-                      Category currentCategoryOld = InformationService.currentCategory;
+                    // store currentCategory
+                    Category currentCategoryOld = InformationService.currentCategory;
 
-                      // set new current category
-                      InformationService.currentCategory = child;
+                    // set new current category
+                    InformationService.currentCategory = child;
 
-                      // navigate to next page
-                      Navigator.push(context, RoutingTransition(page: NavigationPage()))
-                      // reset category when popping the route
-                          .then((value) => InformationService.currentCategory = currentCategoryOld);
+                    // navigate to next page
+                    Navigator.push(context, RoutingTransition(page: NavigationPage()))
+                    // reset category when popping the route
+                        .then((value) => InformationService.currentCategory = currentCategoryOld);
 
-                    });
-                  }
+                  });
+                }
 
-                  // return button with padding
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 15.0),
-                    child: Align(alignment: Alignment.center,child: button),
-                  );
-                },
-              ) : Text('Pretty empty'),
-            ),
+                // return button with padding
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 15.0),
+                  child: Align(alignment: Alignment.center,child: button),
+                );
+              },
+            ) : Text('Pretty empty'),
           ),
           Align(
             alignment: Alignment.bottomLeft,
@@ -236,7 +234,7 @@ class _NavigationPageState extends State<NavigationPage> {
               padding: const EdgeInsets.all(8.0),
               child: HomeButton(),
             ),
-          )
+          ),
         ],
       ),
     );

@@ -81,11 +81,8 @@ class InformationService {
   /// reads all articles from the corresponding json file
   static Future<void> _readArticles() async {
 
-    // read json object from json file
-    Map<String, dynamic> langJSON = jsonDecode(await rootBundle.loadString('assets/information/articles.json'));
-
-    // get list of articles json objects
-    List<dynamic> articles = langJSON['articles'];
+    // read json array from json file
+    List<dynamic> articles = jsonDecode(await rootBundle.loadString('assets/information/articles.json'));
 
     // iterate through all article json objects
     for(Map<String, dynamic> map in articles) {

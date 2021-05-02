@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'Informatik Merkhilfe',
-      home: Container(),
       initialRoute: routeHome,
       onGenerateRoute: (settings) {
         Widget page;

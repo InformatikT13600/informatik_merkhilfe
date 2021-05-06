@@ -10,7 +10,6 @@ class HomeButton extends StatelessWidget {
 
       icon: Transform.scale(
           scale: 2.5,
-          origin: Offset(-10,10),
           child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(701),

@@ -3,14 +3,14 @@
     "name": "boolean",
     "language": "Java",
     "category": "Primitive Datentypen",
-    "content": ["Speichert einen Wahrheitswert: true/false", "Deklaration: \nboolean bool = false; // /true"],
+    "content": ["Speichert einen Wahrheitswert: true/false", "Deklaration: ","<code>boolean bool = false; // /true"],
     "tags": ["primitiv", "wahrheitswert", "true", "false", "deklaration"]
   },
   {
     "name": "byte",
     "language": "Java",
     "category": "Primitive Datentypen",
-    "content": ["Speichert eine Ganzzahl im Bereich -128 ... 127", "Die Speichergröße beträgt also, wie der Name vermuten lässt: 8-bit", "Deklaration: \nbyte b = 42;"],
+    "content": ["Speichert eine Ganzzahl im Bereich -128 ... 127", "Die Speichergröße beträgt also, wie der Name vermuten lässt: 8-bit", "Deklaration:", "<code>byte b = 42;"],
     "tags": ["primitiv", "zahl", "ganzzahl", "deklaration"]
 
   },
@@ -18,42 +18,42 @@
     "name": "short",
     "language": "Java",
     "category": "Primitive Datentypen",
-    "content": ["Speichert eine Ganzzahl im Bereich -32.768 ... 32.767 (Speichergröße 16-bit)", "Deklaration: \nshort s = 3003;"],
+    "content": ["Speichert eine Ganzzahl im Bereich -32.768 ... 32.767 (Speichergröße 16-bit)", "Deklaration:", "<code>short s = 3003;"],
     "tags": ["primitiv", "zahl", "ganzzahl", "deklaration"]
   },
   {
     "name": "char",
     "language": "Java",
     "category": "Primitive Datentypen",
-    "content": ["Speichert ein UTF-16 Symbol (Speichergröße 16-bit)", "Deklaration: \nchar c = 'c';\nZu beachten gilt, dass einfache Anführungszeichen zu verwenden sind. Doppelte Anführungszeichen werden für Strings verwendet. Siehe dazu den Artikel \"Java/Datenstrukturen/Strings\""],
+    "content": ["Speichert ein UTF-16 Symbol (Speichergröße 16-bit)", "Deklaration:", "<code>char c = 'c';", "Zu beachten gilt, dass einfache Anführungszeichen zu verwenden sind. Doppelte Anführungszeichen werden für Strings verwendet. Siehe dazu den Artikel \"Java/Datenstrukturen/Strings\""],
     "tags": ["primitiv", "zeichen", "symbol", "deklaration"]
   },
   {
     "name": "int",
     "language": "Java",
     "category": "Primitive Datentypen",
-    "content": ["Speichert eine Ganzzahl im Bereich -2.147.483.648 ... 2.147.483.647 (32-bit)", "Deklaration: \nint i = 701;", "Integer haben zwar nicht den größten Wertebereich, reichen allerdings für die meisten Anwendungen vollkommen aus. Daher solltest du vorzugsweise immer einen int anstelle eines longs verwenden", "Der int ist außerdem der Standard für Ganzzahlen im Compiler"],
+    "content": ["Speichert eine Ganzzahl im Bereich -2.147.483.648 ... 2.147.483.647 (32-bit)", "Deklaration:", "<code>int i = 701;", "Integer haben zwar nicht den größten Wertebereich, reichen allerdings für die meisten Anwendungen vollkommen aus. Daher solltest du vorzugsweise immer einen int anstelle eines longs verwenden", "Der int ist außerdem der Standard für Ganzzahlen im Compiler"],
     "tags": ["primitiv", "zahl", "ganzzahl", "deklaration"]
   },
   {
     "name": "long",
     "language": "Java",
     "category": "Primitive Datentypen",
-    "content": ["Speichert eine Ganzzahl im Bereich -2^63 ... 2^63-1 (64-bit)", "Deklaration: \nlong l = 70142069;", "Long haben einen wesentlich größeren Wertebereich als Integer, verbrauchen allerdings auch doppelt so viel Speicher. In den meisten Fällen reicht ein int vollkommen aus", "Hängt man einem Zahlenwert den Buchstaben L an, kann man dem Compiler mitteilen, dass es sich um einen long Wert handelt. Per Standard nimmt der Compiler nämlich einen int an"],
+    "content": ["Speichert eine Ganzzahl im Bereich -2^63 ... 2^63-1 (64-bit)", "Deklaration:", "<code>long l = 70142069;", "Long haben einen wesentlich größeren Wertebereich als Integer, verbrauchen allerdings auch doppelt so viel Speicher. In den meisten Fällen reicht ein int vollkommen aus", "Hängt man einem Zahlenwert den Buchstaben L an, kann man dem Compiler mitteilen, dass es sich um einen long Wert handelt. Per Standard nimmt der Compiler nämlich einen int an"],
     "tags": ["primitiv", "zahl", "ganzzahl", "deklaration"]
   },
   {
     "name": "float",
     "language": "Java",
     "category": "Primitive Datentypen",
-    "content": ["Speichert eine Gleitkommazahl im Bereich +/-1,4E-45 ... +/-3,4E+38 (32-bit)", "Deklaration: \nfloat f = 3.14F;", "Üblicherweise werden float-Werte mit einem F am Ende der Zahl beschmückt. Damit teilt man dem Compiler mit, dass es sich bei der Zahl um einen float handelt. Als Standard nimmt der Compiler nämlich den präziseren double an"],
+    "content": ["Speichert eine Gleitkommazahl im Bereich +/-1,4E-45 ... +/-3,4E+38 (32-bit)", "Deklaration:", "<code>float f = 3.14F;", "Üblicherweise werden float-Werte mit einem F am Ende der Zahl beschmückt. Damit teilt man dem Compiler mit, dass es sich bei der Zahl um einen float handelt. Als Standard nimmt der Compiler nämlich den präziseren double an"],
     "tags": ["primitiv", "zahl", "kommazahl", "dezimalzahl", "deklaration"]
   },
   {
     "name": "double",
     "language": "Java",
     "category": "Primitive Datentypen",
-    "content": ["Speichert eine Gleitkommazahl im Bereich +/-4,9E-324 ... +/-1,7E+308 (64-bit)", "Deklaration: \ndouble d = 3.14D;", "Hängt man einem Zahlenwert den Buchstaben D an, kann man dem Compiler mitteilen, dass es sich um einen double Wert handelt"],
+    "content": ["Speichert eine Gleitkommazahl im Bereich +/-4,9E-324 ... +/-1,7E+308 (64-bit)", "Deklaration:", "<code>double d = 3.14D;", "Hängt man einem Zahlenwert den Buchstaben D an, kann man dem Compiler mitteilen, dass es sich um einen double Wert handelt"],
     "tags": ["primitiv", "zahl", "kommazahl", "dezimalzahl", "deklaration"]
   },
   {
@@ -74,49 +74,49 @@
     "name": "If-Anweisung",
     "language": "Java",
     "category": "Kontrollstrukturen",
-    "content":  ["Die If-Anweisung wird wie folgt deklariert:\n\nif(BEDINGUNG) {\n  // ausführen, wenn BEDINGUNG true\n}", "Ist die Bedingung erfüllt, so wird die Anweisung innerhalb des Körpers (Anweisungsblock) ausgeführt und anschließend das Programm nach der If-Anweisung weitergeführt", "Innerhalb des Anweisungskörpers können auch mehrere Anweisungen stehen", "Tritt die Bedingung nicht ein, wird das Programm nach Ende des Anweisungsblockes weitergeführt und der Teil innerhalb dessen übersprungen","An Stelle von BEDINGUNG muss dabei ein boolean-Wert stehen. Das kann entweder true, false, eine boolean-Variable oder ein logischer Ausdruck sein"],
+    "content":  ["Die If-Anweisung wird wie folgt deklariert:", "<code>if(BEDINGUNG) {\n  // ausführen, wenn BEDINGUNG true\n}", "Ist die Bedingung erfüllt, so wird die Anweisung innerhalb des Körpers (Anweisungsblock) ausgeführt und anschließend das Programm nach der If-Anweisung weitergeführt", "Innerhalb des Anweisungskörpers können auch mehrere Anweisungen stehen", "Tritt die Bedingung nicht ein, wird das Programm nach Ende des Anweisungsblockes weitergeführt und der Teil innerhalb dessen übersprungen","An Stelle von BEDINGUNG muss dabei ein boolean-Wert stehen. Das kann entweder true, false, eine boolean-Variable oder ein logischer Ausdruck sein"],
     "tags": ["verzweigung", "bedingung"]
   },
   {
     "name": "If-Else-Anweisung",
     "language": "Java",
     "category": "Kontrollstrukturen",
-    "content":  ["Die If-Else-Anweisung wird wie folgt deklariert:\n\nif(BEDINGUNG) {\n  // ausführen, wenn BEDINGUNG true\n} else {\n  // ausführen, wenn BEDINGUNG false\n}", "Die If-Else-Anweisung funktioniert analog zur If-Anweisung, mit dem Unterschied, dass im Fall, dass die Bedingung false ist, der Code im else-Block ausgeführt wird"],
+    "content":  ["Die If-Else-Anweisung wird wie folgt deklariert:", "<code>if(BEDINGUNG) {\n  // ausführen, wenn BEDINGUNG true\n} else {\n  // ausführen, wenn BEDINGUNG false\n}", "Die If-Else-Anweisung funktioniert analog zur If-Anweisung, mit dem Unterschied, dass im Fall, dass die Bedingung false ist, der Code im else-Block ausgeführt wird"],
     "tags": ["verzweigung", "bedingung"]
   },
   {
     "name": "If-Else-If-Anweisung",
     "language": "Java",
     "category": "Kontrollstrukturen",
-    "content":  ["Die If-ElseIf-Anweisung wird wie folgt deklariert:\n\nif(BEDINGUNG1) {\n  // ausführen, wenn BEDINGUNG1 true\n} else if (BEDINGUNG2) {\n  // ausführen, wenn BEDINGUNG2 true\n}", "Die If-ElseIf-Anweisung unterscheidet mehrere Fälle, funkioniert ansonsten aber analog zur If-Anweisung. Es lassen sich auch mit weiteren \"else if\"s beliebig viele weitere Fälle überprüfen. In der Regel benutzt man dies aber ab 4 oder mehr Fällen aus Gründen der Übersichtlichkeit nicht mehr", "Optional lässt sich auch hier ein else-Block ans Ende anhängen, um sonstige Fälle abzudecken"],
+    "content":  ["Die If-ElseIf-Anweisung wird wie folgt deklariert:", "<code>if(BEDINGUNG1) {\n  // ausführen, wenn BEDINGUNG1 true\n} else if (BEDINGUNG2) {\n  // ausführen, wenn BEDINGUNG2 true\n}", "Die If-ElseIf-Anweisung unterscheidet mehrere Fälle, funkioniert ansonsten aber analog zur If-Anweisung. Es lassen sich auch mit weiteren \"else if\"s beliebig viele weitere Fälle überprüfen. In der Regel benutzt man dies aber ab 4 oder mehr Fällen aus Gründen der Übersichtlichkeit nicht mehr", "Optional lässt sich auch hier ein else-Block ans Ende anhängen, um sonstige Fälle abzudecken"],
     "tags": ["verzweigung", "bedingung"]
   },
   {
     "name": "While-Schleife",
     "language": "Java",
     "category": "Kontrollstrukturen",
-    "content":  ["Die While-Schleife wird wie folgt deklariert:\n\nwhile(BEDINGUNG) {\n  // Code ausführen\n}", "Die While-Schleife funkioniert erst einmal genauso wie eine If-Anweisung - mit einem entscheidenen Unterschied:\n Wurde der Schleifenkörper (Anweisungsblock nach der Bedingung) ausgeführt, springt das Programm wieder zum Schleifenkopf und prüft erneut, ob die Bedingung erfüllt ist. Ist dies der Fall, wird der Schleifenkörper erneut ausgeführt. Das wiederholt sich so lange, wie die Bedingung erfüllt ist", "Wichtig bei einer Schleife ist, dass sich innerhalb des Schleifenkörpers eine sogenannte \"Abbruchbedingung\" befindet. Diese bricht die Schleife ab, sobald eine bestimmte Bedingung erfüllt ist. Gibt es eine solche Abbruchbedingung nicht, oder wird diese nie erreicht, wird die Schleife endlos lange ausgeführt, was in der Regel zu einem Programmabsturz führt", "Es gibt im wesentlichen zwei Wege eine Schleife zu beenden:\n 1. Eine Variable im Schleifenkopf wird so verändert, dass die Bedingung nicht mehr erfüllt ist, oder\n 2. Innerhalb des Schleifenkörpers wird die Anweisung \"break\" ausgeführt.\n break bricht die Schleife an der Stelle, an der es ausgeführt wird ab. Für mehr Informationen, siehe den Artikel \"break und continue\""],
+    "content":  ["Die While-Schleife wird wie folgt deklariert:", "<code>while(BEDINGUNG) {\n  // Code ausführen\n}", "Die While-Schleife funkioniert erst einmal genauso wie eine If-Anweisung - mit einem entscheidenen Unterschied:\n Wurde der Schleifenkörper (Anweisungsblock nach der Bedingung) ausgeführt, springt das Programm wieder zum Schleifenkopf und prüft erneut, ob die Bedingung erfüllt ist. Ist dies der Fall, wird der Schleifenkörper erneut ausgeführt. Das wiederholt sich so lange, wie die Bedingung erfüllt ist", "Wichtig bei einer Schleife ist, dass sich innerhalb des Schleifenkörpers eine sogenannte \"Abbruchbedingung\" befindet. Diese bricht die Schleife ab, sobald eine bestimmte Bedingung erfüllt ist. Gibt es eine solche Abbruchbedingung nicht, oder wird diese nie erreicht, wird die Schleife endlos lange ausgeführt, was in der Regel zu einem Programmabsturz führt", "Es gibt im wesentlichen zwei Wege eine Schleife zu beenden:\n 1. Eine Variable im Schleifenkopf wird so verändert, dass die Bedingung nicht mehr erfüllt ist, oder\n 2. Innerhalb des Schleifenkörpers wird die Anweisung \"break\" ausgeführt.\n break bricht die Schleife an der Stelle, an der es ausgeführt wird ab. Für mehr Informationen, siehe den Artikel \"break und continue\""],
     "tags": ["schleife", "iteration", "bedingung"]
   },
   {
     "name": "Do-While-Schleife",
     "language": "Java",
     "category": "Kontrollstrukturen",
-    "content":  ["Die Do-While-Schleife wird wie folgt deklariert:\n\ndo {\n // Code ausführen\n} while (BEDINGUNG);", "Die Do-While-Schleife funkioniert analog zur While-Schleife - mit dem Unterschied, dass eine Do-While-Schleife erst den Anweisungsblock ausführt, und dann die Bedingung prüft. Damit wird sichergestellt, dass der Anweisungsblock unabhängig von der Bedingung immer zumindest einmal ausgeführt wird"],
+    "content":  ["Die Do-While-Schleife wird wie folgt deklariert:", "<code>do {\n // Code ausführen\n} while (BEDINGUNG);", "Die Do-While-Schleife funkioniert analog zur While-Schleife - mit dem Unterschied, dass eine Do-While-Schleife erst den Anweisungsblock ausführt, und dann die Bedingung prüft. Damit wird sichergestellt, dass der Anweisungsblock unabhängig von der Bedingung immer zumindest einmal ausgeführt wird"],
     "tags": ["schleife", "iteration", "bedingung"]
   },
   {
     "name": "For-Schleife",
     "language": "Java",
     "category": "Kontrollstrukturen",
-    "content":  ["Die For-Schleife wird auch als Zählerschleife bezeichnet und in folgender Form deklariert:\n\nfor(int i = 0; i < n; i++) {\n  // Wiederhole n-mal\n}", "Im Schleifenkopf wird \n1. eine Zählervariable (hier i) initialisiert,\n2. eine Bedingung aufgestellt und\n3. die Zählervariable hochgezählt", "Wird eine For-Schleife ausgeführt, so wird zunächst die Zählervariable initialisiert und anschließend die Schleifenbedingung überprüft. Ist die Bedingung erfüllt, wird der Schleifenkörper ausgeführt und danach die Zählerschleife erhöht, bzw. verringert", "Die Zählervariable muss dabei nicht mit 0 initialisiert werden und sie muss auch nicht zwangsläufig um den Wert 1 erhöht werden, jedoch ist das die übliche Form"],
+    "content":  ["Die For-Schleife wird auch als Zählerschleife bezeichnet und in folgender Form deklariert:", "<code>for(int i = 0; i < n; i++) {\n  // Wiederhole n-mal\n}", "Im Schleifenkopf wird \n1. eine Zählervariable (hier i) initialisiert,\n2. eine Bedingung aufgestellt und\n3. die Zählervariable hochgezählt", "Wird eine For-Schleife ausgeführt, so wird zunächst die Zählervariable initialisiert und anschließend die Schleifenbedingung überprüft. Ist die Bedingung erfüllt, wird der Schleifenkörper ausgeführt und danach die Zählerschleife erhöht, bzw. verringert", "Die Zählervariable muss dabei nicht mit 0 initialisiert werden und sie muss auch nicht zwangsläufig um den Wert 1 erhöht werden, jedoch ist das die übliche Form"],
     "tags": ["schleife", "iteration", "bedingung"]
   },
   {
     "name": "For-Each-Schleife",
     "language": "Java",
     "category": "Kontrollstrukturen",
-    "content":  ["Die For-Each-Schleife iteriert durch Iterables, wie Listen oder Arrays.\n\nSie wird wie folgt initialisiert:\n// list ist vom Typ List<Object>\nfor(Object element : list) {\n  // Code ausführen\n}", "Die For-Each-Schleife wiederholt den im Schleifenkörper definierten Ausführungsblock so oft, wie das Iterable lang ist, wobei element bei jedem Schleifendurchlauf das jeweilige Element des Iterables ist", "Wichtig: Das Iterable kann innerhalb der Schleife nicht bearbeitet werden"],
+    "content":  ["Die For-Each-Schleife iteriert durch Iterables, wie Listen oder Arrays.\n\nSie wird wie folgt initialisiert:", "<code>// list ist vom Typ List<Object>\nfor(Object element : list) {\n  // Code ausführen\n}", "Die For-Each-Schleife wiederholt den im Schleifenkörper definierten Ausführungsblock so oft, wie das Iterable lang ist, wobei element bei jedem Schleifendurchlauf das jeweilige Element des Iterables ist", "Wichtig: Das Iterable kann innerhalb der Schleife nicht bearbeitet werden"],
     "tags": ["schleife", "iteration", "bedingung"]
   },
   {

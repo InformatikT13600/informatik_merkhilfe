@@ -52,7 +52,7 @@ class _ArticlePageState extends State<ArticlePage> {
                             clipBehavior: Clip.hardEdge,
                             child: Padding(
                               padding: const EdgeInsets.only(bottom: 15),
-                              child: Text(widget.article.content[index].substring(6, widget.article.content[index].length), style: TextStyle(fontSize: 22, color: Colors.white, height: 1.5),),
+                              child: Text(widget.article.content[index].substring(6, widget.article.content[index].length), style: TextStyle(fontSize: 22, color: colorContrast, height: 1.5),),
                             ),
                           );
 

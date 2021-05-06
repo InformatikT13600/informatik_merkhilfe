@@ -74,7 +74,7 @@ class _ArticlePageState extends State<ArticlePage> {
           Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(40.0),
               child: HomeButton(),
             ),
           )

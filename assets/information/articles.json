@@ -123,7 +123,7 @@
     "name": "Switch-Anweisung",
     "language": "Java",
     "category": "Kontrollstrukturen",
-    "content":  ["Eine Switch-Anweisung dient dazu, verschiedene Fälle zu unterscheiden. Im Folgenden das Beispiel einer Überprüfung von einer String-Variable:", "<code>switch(wochentag) {\n  case(\"Samstag\"): System.out.println(\"Es ist Samstag!\"); break;\n  case(\"Sonntag\"): System.out.println(\"Es ist Sonntag!\"); break;\n  default: System.out.println(\"Es ist kein Wochenende );\");\n}", "\"default: \" ist dabei der Default-Case, also das, was ausgeführt wird, wenn keiner der anderen Fälle eintritt", "Wichtig: Am Ende jedes Ausführungsblockes in einem case, muss ein break sein, da sonst der Code aus dem nächsten Case ebenfalls ausgeführt wird. Bei dem default-case braucht es das nicht"],
+    "content":  ["Eine Switch-Anweisung dient dazu, verschiedene Fälle zu unterscheiden. Im Folgenden das Beispiel einer Überprüfung von einer String-Variable:", "<code>switch(wochentag) {\n  case(\"Samstag\"): System.out.println(\"Es ist Samstag!\"); break;\n  case(\"Sonntag\"): System.out.println(\"Es ist Sonntag!\"); break;\n  default: System.out.println(\"Es ist kein Wochenende\");\n}", "\"default: \" ist dabei der Default-Case, also das, was ausgeführt wird, wenn keiner der anderen Fälle eintritt", "Wichtig: Am Ende jedes Ausführungsblockes in einem case, muss ein break sein, da sonst der Code aus dem nächsten Case ebenfalls ausgeführt wird. Bei dem default-case braucht es das nicht"],
     "tags": ["verzweigung", "bedingung", "case"]
   },
   {

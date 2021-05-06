@@ -42,10 +42,28 @@ class _ArticlePageState extends State<ArticlePage> {
                       clipBehavior: Clip.hardEdge,
                       itemCount: widget.article.content.length,
                       itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.only(bottom: 15),
-                          child: Text('- ${widget.article.content[index]}', style: TextStyle(fontSize: 22, color: Colors.white),),
-                        );
+
+                        // check if line is a code line
+                        if(widget.article.content[index].startsWith('<code>')) {
+
+                          // return code block widget
+                          return SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            clipBehavior: Clip.hardEdge,
+                            child: Padding(
+                              padding: const EdgeInsets.only(bottom: 15),
+                              child: Text(widget.article.content[index].substring(6, widget.article.content[index].length), style: TextStyle(fontSize: 22, color: Colors.white, height: 1.5),),
+                            ),
+                          );
+
+                        } else {
+
+                          // return normal line
+                          return Padding(
+                            padding: const EdgeInsets.only(bottom: 15),
+                            child: Text('- ${widget.article.content[index]}', style: TextStyle(fontSize: 22, color: Colors.white, height: 1.5),),
+                          );
+                        }
                       },
                     ),
                   ),
